@@ -15,7 +15,7 @@ C++ で matplotlib のようなグラフを描くためのライブラリ。
 
 ## OpenGLのインストールとプログラムのコンパイル (Win と Linux で別々)
 
-### Windows と Visual Studio を使う場合  
+### Windows と Visual Studio を使う場合
 
 インストールは難、コンパイルは易
 
@@ -25,23 +25,23 @@ C++ で matplotlib のようなグラフを描くためのライブラリ。
   [GLUTによる「手抜き」OpenGL入門](http://www.wakayama-u.ac.jp/~tokoi/opengl/libglut.html#2.3)
   
   
-#### コンパイル  
+#### コンパイル
 
 WindowsでVisual Studioを使うなら、F5押すだけでOK  
 
 
-### Linux(RedHat) を使う場合  
+### Linux(RedHat) を使う場合
 
 インストールは易、コンパイルは難
 
 #### OpenGL インストール
 
-コマンドで簡単にインストール可能  
+コマンドで簡単にインストール可能
 
     yum install -y freeglut  
     yum install -y freeglut-devel  
 
-これでコンパイルしてもだめなときは  
+これでコンパイルしてもだめなときは 
 
     yum install -y libXmu-devel
     yum install -y libXi-devel  
@@ -52,10 +52,15 @@ RedHat以外のOSを使う場合、エラーが起きる場合、インストー
 
 #### コンパイル
 
-以下のMakefileを作る  
+以下のMakefileを作る
 
     CFLAGS = -I/usr/X11R6/include
     LDLIBS = -L/usr/X11R6/lib -lglut -lGLU -lGL -lXmu -lXi -lXext -lX11 -lm -lpthread
-    a.out: program.c
-    --Tab-->$(CXX) $(CFLAGS) program.c $(LDLIBS)
+    a.out: main.c
+    --Tab-->$(CXX) $(CFLAGS) main.c $(LDLIBS)
+    
+
+## サンプルコード
+次のコードを実行して正しくグラフが表示されればだいたいOK
+
 
