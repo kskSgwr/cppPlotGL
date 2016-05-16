@@ -5,17 +5,29 @@ C++ で matplotlib のようなグラフを描くためのライブラリ。
 
 ##必要なもの
 * OpenGL  
+* Eigen (C++ 用の行列計算ライブラリ)
 * c++11 以上のコンパイラ  
 
 ## Windows と Visual Studio を使う場合  
 
 インストールは難、コンパイルは易
+
+### インストール
+
 難しいので次のサイトを参照  
   [GLUTによる「手抜き」OpenGL入門](http://www.wakayama-u.ac.jp/~tokoi/opengl/libglut.html#2.3)
+  
+### コンパイル  
+
+WindowsでVisual Studioを使うなら、F5押すだけでOK  
+
 
 ## Linux(RedHat) を使う場合  
 
 インストールは易、コンパイルは難
+
+## インストール
+
 コマンドで簡単にインストール可能  
 
     yum install -y freeglut  
@@ -30,11 +42,12 @@ C++ で matplotlib のようなグラフを描くためのライブラリ。
 RedHat以外のOSを使う場合、エラーが起きる場合、インストーラを使う必要がある場合などは次のページを参照  
 [GLUTによる「手抜き」OpenGL入門](http://www.wakayama-u.ac.jp/~tokoi/opengl/libglut.html#2.2)
 
+### コンパイル
 
-## コンパイル
+以下のMakefileを作る  
 
     CFLAGS = -I/usr/X11R6/include
     LDLIBS = -L/usr/X11R6/lib -lglut -lGLU -lGL -lXmu -lXi -lXext -lX11 -lm -lpthread
     a.out: program.c
-    --Tab-->$(CC) $(CFLAGS) program.c $(LDLIBS)
+    --Tab-->$(CXX) $(CFLAGS) program.c $(LDLIBS)
 
