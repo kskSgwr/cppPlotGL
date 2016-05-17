@@ -11,10 +11,10 @@ C++ で matplotlib のようなグラフを描くためのライブラリ。
 
 ## Eigen インストール (Windows と Linux で共通)
 [ここ](http://eigen.tuxfamily.org/index.php?title=Main_Page)からEigenの最新版をダウンロード。  
-圧縮ファイルを展開して、"Eigen"ディレクトリを適当なところにコピー
+圧縮ファイルを展開して、"Eigen"ディレクトリを適当なところにコピー  
 参考Webサイト:  
-[NAISTの資料](http://robotics.naist.jp/edu/text/?Robotics%2FEigen#p25e3cb6)  
-[PFI 岡野原さんの資料](https://research.preferred.jp/2010/11/eigen/)
+* [NAISTの資料](http://robotics.naist.jp/edu/text/?Robotics%2FEigen#p25e3cb6)  
+* [PFI 岡野原さんの資料](https://research.preferred.jp/2010/11/eigen/)
 
 ## OpenGLのインストールとプログラムのコンパイル (Win と Linux で別々)
 
