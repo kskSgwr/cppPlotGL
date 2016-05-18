@@ -65,7 +65,7 @@ RedHat以外のOSを使う場合、エラーが起きる場合、インストー
 
 ## サンプルコード
 OpenGLに関しては、次のコードを実行して青い画面が表示されればだいたいOK
-
+```cpp:main.cpp
     #include <GL/glut.h>
     
     void display(void)
@@ -89,4 +89,4 @@ OpenGLに関しては、次のコードを実行して青い画面が表示さ�
       glutMainLoop();
       return 0;
     }
-
+```
