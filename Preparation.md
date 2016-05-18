@@ -66,27 +66,24 @@ RedHat以外のOSを使う場合、エラーが起きる場合、インストー
 ## サンプルコード
 OpenGLに関しては、次のコードを実行して青い画面が表示されればだいたいOK
 ```cpp:main.cpp
-    #include <GL/glut.h>
+#include <GL/glut.h>
     
-    void display(void)
-    {
-      glClear(GL_COLOR_BUFFER_BIT);
-      glFlush();
-    }
+void display(void){
+  glClear(GL_COLOR_BUFFER_BIT);
+  glFlush();
+}
 
-    void init(void)
-    {
-      glClearColor(0.0, 0.0, 1.0, 1.0);
-    }
+void init(void){
+  glClearColor(0.0, 0.0, 1.0, 1.0);
+}
 
-    int main(int argc, char *argv[])
-    {
-      glutInit(&argc, argv);
-      glutInitDisplayMode(GLUT_RGBA);
-      glutCreateWindow(argv[0]);
-      glutDisplayFunc(display);
-      init();
-      glutMainLoop();
-      return 0;
-    }
+int main(int argc, char *argv[]){
+  glutInit(&argc, argv);
+  glutInitDisplayMode(GLUT_RGBA);
+  glutCreateWindow(argv[0]);
+  glutDisplayFunc(display);
+  init();
+  glutMainLoop();
+  return 0;
+}
 ```
